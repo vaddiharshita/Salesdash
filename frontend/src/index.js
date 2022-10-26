@@ -1,7 +1,7 @@
 import React from 'react';
 
 import ReactDOM from 'react-dom/client';
-import SalesDashboard from './components/salesDashboard';
+import SalesDashboard from './salesDashboard';
 
 
 

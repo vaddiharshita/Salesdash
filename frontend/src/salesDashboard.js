@@ -1,15 +1,18 @@
-import React, { useState } from 'react'
-import LeftBar from './Leftbar'
-import TitleBar from './Titlebar'
-import Topbar from './Topbar'
+import React, { useEffect, useState } from 'react'
+import LeftBar from './components/Leftbar'
+import TitleBar from './components/Titlebar'
+import Topbar from './components/Topbar'
 import './salesDashboard.css'
-import SalesDash from './Msale'
+import SalesDash from './components/Msale'
+
 import axios from 'axios'
 export default function SalesDashboard() {
+ 
   const [todo, setTodo]=useState([])
   const [inProgress, setInProgress]=useState([])
   const [completed, setCompleted]=useState([])
   ///
+  useEffect(()=>{
     const url = "http://localhost:3000/dev/getTODO";
     const data = {}
     const header = {}
@@ -49,6 +52,7 @@ export default function SalesDashboard() {
     .catch((err)=>{
       console.log(err)
     })
+  },[]);
   return (
     <div className='salesdash_outer'>
       <Topbar />

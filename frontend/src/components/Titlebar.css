@@ -3,12 +3,14 @@ body{
 }
 .titlebar_top{
     background-color:   #f3f3f4;
-    padding: 15px 30px;
+    padding: 20px 30px;
     display: flex;
     justify-content: space-between;
-    box-shadow: 0px 0px 0px 1px lightgray;
-    width: 131vh;
- 
+    width: 947px;
+    border-top-left-radius: 18px;
+    border-top-right-radius: 18px;
+    font-family:Arial, Helvetica, sans-serif;
+
 }
 .titlebar_top_col1{
     width: 11%;
@@ -35,14 +37,14 @@ body{
     align-items: center;
     padding: 7px 30px;
     border-radius: 20px;
-    border: 1px solid #7C8AA5;
+    border: 1px solid #171718;
 }
 .titlebar_top_col22{
     background-color: #8833FF;
     width: 35%;
     display: flex;
     align-items: center;
-    padding: 8px 30px;
+    padding: 10px 30px;
     border-radius: 20px;
     padding-right: 10px;
     margin-right: 70px;
@@ -52,8 +54,12 @@ body{
 .titlebar_top_col22 label
 {
    
-    padding-left: 10px;
+    padding-right: 3px;
     font-size: x-small;
+    display: flex;
+    align-items: left;
+    margin-left: 3px;
+   
 }
 .titlebar_top_col22 label{
     color: #e5e5e5;
@@ -62,10 +68,9 @@ body{
 .titlebar_plusIcon{
     color: #C3CAD9;
     font-size: x-small;
-    display: flex;
-    
-
-    
+    margin-left: -14px;
+ 
+       
 }
 .titlebar_downloadIcon{
     color: rgb(113, 183, 183);

@@ -5,8 +5,8 @@
 ///
 var mysql = require('mysql');
 var con = mysql.createConnection({
-  host: "localhost",
-  user: "root",
+  host: "database-1.cufkzfwhztsx.us-east-1.rds.amazonaws.com",
+  user: "admin",
   password: "password",
   database: "crm"
 });
@@ -421,7 +421,7 @@ module.exports.updatecampaign = async (event) => {
   let result = await new Promise((resolve, reject) => {
     if (campname == "") {
       resolve("campname is mandatory");
-      return res
+      return resolve
     }
     con.query(sql, function (err, result) {
       if (err) throw err;
@@ -463,7 +463,7 @@ module.exports.GetSingleTask = async (event) => {
 module.exports.GetSingleTask = async (event) => {
   //let request = JSON.parse(event.body);
   let request = event.body;
-  let id = req.id;
+  let id = request.id;
   let sql = "select tasktitle,txtowner,dtStartdate,dtEnddate from tblactivity where id = '" + id + "';";
   let result = await new Promise((resolve, reject) => {
     if (id == "") {

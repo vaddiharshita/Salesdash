@@ -23,16 +23,18 @@ export default function Topbar() {
                     <div className="Topbar_icon_circle">
                         <AiOutlineMenu />
 
-                    </div><h3>Company</h3>
-
+                    </div>
+                    <div className="Topbar_Company">
+                    <h3>Company</h3>
+                    </div>
                 </div>
                 <div className="Topbar_col2" >
                     <ul>
                         <li>Dashboard</li>
                         <li>Accounts</li>
-                        <div className="Tobar_col2_on" onClick={(e) => { handleclick(e) }}><li>campaigns</li></div>
-                        <div className="Tobar_col2_on1" onClick={(e) => { handleclick(e) }}><li>leads</li></div>
-                        <div className="Tobar_col2_on2" onClick={(e) => { handleclick(e) }}><li>prospects</li></div>
+                        <div className="Tobar_col2_on" onClick={(e) => { handleclick(e) }}><li>Campaigns</li></div>
+                        <div className="Tobar_col2_on1" onClick={(e) => { handleclick(e) }}><li>Leads</li></div>
+                        <div className="Tobar_col2_on2" onClick={(e) => { handleclick(e) }}><li>Prospects</li></div>
                         <li>
                             <BsThreeDots />
                         </li>
@@ -40,8 +42,9 @@ export default function Topbar() {
                 </div>
                 <div className="Topbar_col3">
                     <AiOutlineSearch className="Topbar_searchIcon" />
-                    <input type={"text"} placeholder="Search Products,Orders and Clients" />
-                    <MdArrowForwardIos className="Topbar_arrowIcon" />
+                    <div className="Topbar_Search_content">
+                        <input type={"text"} placeholder="Search Products,Orders and Clients" />
+        </div><MdArrowForwardIos className="Topbar_arrowIcon" />
                 </div>
                 <div className="Topbar_col4">
                     <CgProfile className="Topbar_profileIcon" />

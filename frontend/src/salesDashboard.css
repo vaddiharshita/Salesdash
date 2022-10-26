@@ -4,10 +4,11 @@
 }
 .salesdash_content_right{
     background-color: white; 
-    width: 95%;
+    width: 100%;
     padding: 30px;
     display: flex;
     justify-content: center;
+    padding-right: 130px;
   
     
 }
